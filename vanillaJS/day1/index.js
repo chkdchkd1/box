@@ -1,3 +1,6 @@
+//ecmascript es5 es6  <- 안내 책자, 버젼(specification) 같은 것
+// 바닐라 자바스크립 : without 라이브러리 , 자바스크립 민낯?
+
 const a = 221;
 // constant 상수 변하지 않는 수 
 // 기본적으로 변수를 선언할 땐 const를 쓸 것 , 필요할 때 까지는 let을 쓰지말 것 
