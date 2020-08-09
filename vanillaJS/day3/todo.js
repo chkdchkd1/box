@@ -4,9 +4,37 @@ const toDoform = document.querySelector(".js-toDoForm"),
 
 
 const TODOS_LS="toDos";
-const toDos = [];
+let toDos = [];
 
 
+
+function deleteToDo(event){
+    // console.log(event.target.parentNode);
+    // console.dir(event.target.parentNode);
+    // 그냥 event로 걸면 어떤 버튼이 클릭되었는지 알 수 없다. console.log(event.target):  <button> X </button>
+    /* dir 객체는 dir, 나머지는 log로 로깅하면 편합니다. DOM 객체를 로깅해보겠습니다.
+    console.log(document.body);  <body>...</body>
+    DOM 객체의 메서드가 뭐가 있는지 보고싶은데 태그만 보입니다. 이럴 때 dir을 쓰면 됩니다. */
+ 
+    const btn = event.target;
+    const li = btn.parentNode;
+    toDoList.removeChild(li);
+    const cleanToDos = toDos.filter(function filterFn(toDo){
+        // filter는 forEach에서 function을 실행하는 것 같이 각각의  item 같이실행된다 
+        // filterFn을 체크해서 true인 item으로 새로운 array를 만든다. 
+        // filter(객체)
+        // console.log(toDo.id , li.id);
+    return toDo.id !== parseInt(li.id);
+    // 배열에 저장되어 있는 id와 li의 id..! 헷갈리지 말것! 
+    // li.id는 string 이기에 int로 바꾸어 주어야한다. ( "1" )
+    // 내가 지우고 싶은걸 제외한걸 담아 array로 만든게 cleanToDos
+    });
+
+    toDos = cleanToDos
+    // 이전의 것을 새로운것으로 바꿈.. but 처음에 toDos를 const로 했기때문에 바꿀 수 없다
+    //  그래서 let 으로 바꿔야한다 (const는 변하지 않는 상수 )
+    saveToDos();
+}
 
 function saveToDos(){
     localStorage.setItem(TODOS_LS,JSON.stringify(toDos));
@@ -23,11 +51,13 @@ function paintToDo(text){
     const li = document.createElement("li");
     const delBtn = document.createElement("button");
     delBtn.innerText = " X " ;
+    delBtn.addEventListener("click",deleteToDo)
     const span = document.createElement("span");
-    const newId = toDos.length +1 ;
-    span.innerHTML = text ; 
+    span.innerHTML = text ;
     li.appendChild(span)
     li.appendChild(delBtn)
+    const newId = toDos.length+1 ;
+    // 아직 toDos에 안넣었기 때문에 toDos.length는 0임 근데 첫번째 넣을경우 1번이 들어가야하니까 +1
     li.id = newId
     // span과 delBtn을 li의 자식으로 요소를 안에 넣는거 
     toDoList.appendChild(li);
@@ -76,3 +106,5 @@ function init(){
     toDoform.addEventListener("submit",handleSubmit)
 }
     init();
+
+
