@@ -2,8 +2,11 @@ const toDoform = document.querySelector(".js-toDoForm"),
     toDoinput = toDoform.querySelector("input"),
     toDoList = document.querySelector(".js-toDoList");
 
+
 const TODOS_LS="toDos";
 let toDos = [];
+
+
 
 function deleteToDo(event){
     // console.log(event.target.parentNode);
@@ -51,7 +54,12 @@ function paintToDo(text){
     delBtn.addEventListener("click",deleteToDo)
     const span = document.createElement("span");
     span.innerHTML = text ;
+    const date = document.createElement("span");
+    let registerDate = new Date();
+    registerDate = getFormatDate(registerDate);
+    date.innerText = registerDate;
     li.appendChild(span)
+    li.appendChild(date)
     li.appendChild(delBtn)
     const newId = toDos.length+1 ;
     // 아직 toDos에 안넣었기 때문에 toDos.length는 0임 근데 첫번째 넣을경우 1번이 들어가야하니까 +1
@@ -59,13 +67,58 @@ function paintToDo(text){
     // span과 delBtn을 li의 자식으로 요소를 안에 넣는거 
     toDoList.appendChild(li);
     const toDoObj = {
+        date : registerDate,
         text : text,
         id : newId
     };
 
     toDos.push(toDoObj);
     saveToDos();
+    
 }
+
+
+function getFormatDate(date){
+    var year = date.getFullYear();              //yyyy
+    var month = (1 + date.getMonth());          //M
+    month = month >= 10 ? month : '0' + month;  //month 두자리로 저장
+    var day = date.getDate();                   //d
+    day = day >= 10 ? day : '0' + day;          //day 두자리로 저장
+    var hour = date.getHours();
+    var minute = date.getMinutes();
+    var second = date.getSeconds();
+    return  ' (' + year + '/' + month + '/' + day + ' ' + hour + ':' + minute + ':' + second + ')';    //'-' 추가하여 yyyy-mm-dd 형태 생성 가능
+}
+
+function paintToDo2(toDo){
+
+    const li = document.createElement("li");
+    const delBtn = document.createElement("button");
+    delBtn.innerText = " X " ;
+    delBtn.addEventListener("click",deleteToDo)
+    const span = document.createElement("span");
+    span.innerHTML = toDo.text ;
+    const registerDate = document.createElement("span");
+    registerDate.innerText = toDo.date;
+    li.appendChild(span)
+    li.appendChild(registerDate)
+    li.appendChild(delBtn)
+    const newId = toDos.length+1 ;
+    // 아직 toDos에 안넣었기 때문에 toDos.length는 0임 근데 첫번째 넣을경우 1번이 들어가야하니까 +1
+    li.id = newId
+    // span과 delBtn을 li의 자식으로 요소를 안에 넣는거 
+    toDoList.appendChild(li);
+    const toDoObj = {
+        date : toDo.date,
+        text : toDo.text,
+        id : newId
+    };
+
+    toDos.push(toDoObj);
+    saveToDos();
+    
+}
+
 
 
 function handleSubmit(event){
@@ -85,10 +138,11 @@ function loadToDos(){
 
         //localStorge에 기존에 저장된걸 화면에 출력해야함 
         parsedToDos.forEach(function(toDo){
-            paintToDo(toDo.text);
+            paintToDo2(toDo);
         })
         // parsedToDos.forEach(something);  위와 같은 코드, 단지 하나로 합친것일뿐 
         // forEach는 array를 위한 function
+
     } 
 }
 

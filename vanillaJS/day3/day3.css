@@ -12,3 +12,8 @@ body{
 .showing{
     display: block;
 }
+
+
+span:nth-of-type(2) {
+    font-size: 12px;
+}
