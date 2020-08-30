@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <link rel="stylesheet" href="side.css">
+    <script src="https://kit.fontawesome.com/c2a1b202c0.js" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <style>
+        .adminMenu-box{
+            height: 130px;
+            width: 460px;
+            margin: 0 auto;
+            margin-top: 200px ;
+
+
+        }
+
+        .adminMenu-box ul{
+            float: left;
+
+        }
+
+        .adminMenu-box ul li{
+            float: left;
+            border: solid 2px rgba(210, 215, 217, 0.75);
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 40px;
+            margin-left: 10px;
+            color: #7f807d;
+        }
+
+        .adminMenu-box ul li span{
+            font-size: 17px;
+            line-height: 17px;
+            display: block;
+            color: #7f807d;
+            font-weight: bold;
+        }
+
+
+
+
+    </style>
+</head>
+
+    <div class="frame">
+        <div class="left-container">
+            <div class="search-box">
+                <input type="text" placeholder="  Search"/>
+                <button class="btn-search"><i class="fas fa-search"></i></button>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="/main/side-left.html" class="nav-link"><span>메인페이지</span></a></li>
+                <li class="nav-item"><a href="/main/side-left-board.html" class="nav-link"><span>전시</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><span>행사 / 축제</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><span>티켓오픈공지</span></a></li>
+                <li><span class="nav-text">예매 정보</span></li>
+                    <ul>
+                        <li class="nav-item2"><a href="#" class="nav-link">날짜별 예매</a></li>
+                        <li class="nav-item2"><a href="#" class="nav-link">지역별 예매</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link"></i><span>고객센터</span></a>
+            </ul>
+          </div>
+          <!-- //left-container -->
+        <div class="right-container">
+          <div class="content">
+            <!-- login-box -->
+            <div class="codrops-container">
+              <nav class="loging-box">
+                <ul>
+                  <li>로그인</li>
+                  <li>회원가입</li>
+                  <li>로그아웃</li>
+                  <li>관리자페이지</li>
+                  <li>회원정보</li>
+                  <li>예매확인/취소</li>
+                </ul>
+              </nav>
+            </div>
+            <!-- main-content -->
+            <div class="main-content">
+                <div class="adminMenu-box">
+                    <ul>
+                        <li><i class="fas fa-pen"></i><br>
+                            <span>상품등록</span></li>
+                        <li><i class="fas fa-edit"></i><br>
+                            <span>상품관리</span></li>
+                        <li><i class="fas fa-chart-line"></i><br>
+                            <span>차트</span></li>
+                        <li><i class="fas fa-bullhorn"></i><br>
+                            <span>공지등록</span></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- //main-content -->
+        </div>
+        <!-- //right-container -->
+      </div>
+      <!-- //frame -->
+
+
+    
+<body>
+<script>
+    //   https://ming9mon.tistory.com/107
+    // https://www.chartjs.org/docs/latest/
+    // https://startbootstrap.com/previews/sb-admin/
+    // https://startbootstrap.com/templates/admin-dashboard/
+
+    // 티켓오픈 고객센터 티켓관리(옆에다가 수정버튼 달기)
+    // 차트 (상품코드 상품명 시작일 종료일 ) ( 아레아 차트(매일마다 몇명이 예약했는지) 파이차트 (성별 / 나이대별) 총 티켓 예매수 / 매출 )
+    // ----> yes24 티켓오픈 공지 참고하기 
+
+// 상품등록, 티켓오픈공지 등록, 고객센터 등록, yes24 고객센터 1:1 문의 하기 폼 참고해서 티켓오픈 공지랑 스타일 맞추기 
+ 
+</script>
+</body>
+</html>
