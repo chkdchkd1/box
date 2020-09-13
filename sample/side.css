@@ -2129,7 +2129,7 @@ table {
 }
 
 .category {
-    width: 930px;
+    width: 1100px;
     margin: 0 auto;
     font-size: 0;
     position: relative;
@@ -2183,7 +2183,7 @@ table {
 }
 
 .noti-tbl {
-    width: 930px;
+    width: 1100px;
     margin: 0 auto 37px auto;
     border-bottom: 1px solid #999;
 }
@@ -2250,7 +2250,7 @@ table {
     min-height: 22px;
     padding: 24px 0 21px 0;
     position: relative;
-    width: 930px;
+    width: 1100px;
     margin: 0 auto;
 }
 
@@ -2272,7 +2272,7 @@ table {
     display: inline-block;
     font-size: 17px;
     color: #333;
-    width: 780px;
+    width: 850px;
     line-height: 22px;
 }
 
@@ -2280,7 +2280,7 @@ table {
     height: 60px;
     line-height: 60px;
     text-align: right;
-    width: 930px;
+    width: 1100px;
     margin: 0 auto;
 }
 
@@ -2291,7 +2291,7 @@ table {
     position: relative;
 }
 
-
+/* 
 .noti-view-date span:after {
     content: "";
     display: block;
@@ -2302,10 +2302,10 @@ table {
     position: absolute;
     right: -15px;
     top: 5px;
-}
+} */
 
 .noti-view-ticket {
-    width: 930px;
+    width: 1100px;
     margin: 0 auto 60px auto;
     background: #f6f6f6;
     position: relative;
@@ -2329,7 +2329,7 @@ table {
 
 .noti-vt-right {
     float: left;
-    width: 570px;
+    width: 770px;
 }
 
 .noti-vt-tit {
@@ -2388,7 +2388,7 @@ table {
 
 .noti-view-con {
     border-bottom: 1px solid #999;
-    width: 930px;
+    width: 1100px;
     margin: 0 auto;
 }
 
@@ -2411,7 +2411,7 @@ table {
 }
 
 .noti-view-control {
-    width: 930px;
+    width: 1100px;
     margin: 60px auto 0 auto;
     text-align: center;
     overflow: hidden;
@@ -2463,13 +2463,14 @@ table {
 
 
 .mgz-view-cmarea {
-    width: 850px;
+    width: 1100px;
     margin: 0 auto 58px auto;
     /* border: 1px solid #ddd; */
     padding: 120px 20px;
+    padding-top:0px;
 }
 .mgz-view-textarea {
-    width: 720px;
+    width: calc(90% - 10px);;
     height: 108px;
     border: 1px solid #ddd;
     overflow: hidden;
@@ -2483,7 +2484,7 @@ table {
     border: 0 none;
     border-right: 1px solid #ddd;
     padding: 20px;
-    width: 571px;
+    width: 831px;
     height: 68px;
     float: left;
     resize: none;
