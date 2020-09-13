@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <link rel="stylesheet" href="side.css">
+    <script src="https://kit.fontawesome.com/c2a1b202c0.js" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+    <div class="frame">
+        <div class="left-container">
+            <div class="search-box">
+                <input type="text" placeholder="  Search"/>
+                <button class="btn-search"><i class="fas fa-search"></i></button>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="/main/side-left.html" class="nav-link"><span>메인페이지</span></a></li>
+                <li class="nav-item"><a href="/main/side-left-board.html" class="nav-link"><span>전시</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><span>행사 / 축제</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><span>티켓오픈공지</span></a></li>
+                <li><span class="nav-text">예매 정보</span></li>
+                    <ul>
+                        <li class="nav-item2"><a href="#" class="nav-link">날짜별 예매</a></li>
+                        <li class="nav-item2"><a href="#" class="nav-link">지역별 예매</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link"></i><span>고객센터</span></a>
+            </ul>
+          </div>
+          <!-- //left-container -->
+        <div class="right-container">
+          <div class="content">
+            <!-- login-box -->
+            <div class="codrops-container">
+              <nav class="loging-box">
+                <ul>
+                  <li>로그인</li>
+                  <li>회원가입</li>
+                  <li>로그아웃</li>
+                  <li>관리자페이지</li>
+                  <li>회원정보</li>
+                  <li>예매확인/취소</li>
+                </ul>
+              </nav>
+            </div>
+            <!-- main-content -->
+            <div class="main-content">
+                <div class="content-min-wrap">
+                    <div id="NoticeMainDisplay" style="display: block;">  
+                        <!-- 공지사항 리스트 -->    
+                        <div id="BoardList">
+                            <div class="noti-tbl"> 
+                                <table>
+                                    <colgroup>
+                                    <col width="10%">
+                                    <col width="50%">
+                                    <col width="30%">
+                                    <col width="10%">
+                                    </colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="col">상품코드</th>
+                                        <th scope="col">상품명</th>
+                                        <th scope="col" class="onlyPM">공연 일시</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                        
+                                            <tr>
+                                                <td>
+                                                    37387
+                                                </td>
+                                                <td>
+                                                    <a href="#id=10454"><em>2020 부산비엔날레</em></a>
+                                                </td>
+                                                <td class="td-onlyPM"> 
+                                                    2020.09.05 ~ 2020.11.08</td>
+                                                <td>
+                                                    <a href="#" class="btn-product-m">수정</a>
+                                                </td>
+                                            </tr>
+
+                                    </tbody>
+                                </table>                            
+                            </div>
+                        </div>
+                        <!-- 페이지네이션 -->
+                    </div>
+                </div>
+                <!--  content-min-wrap -->
+            </div>
+            <!-- //main-content -->
+        </div>
+        <!-- //right-container -->
+      </div>
+      <!-- //frame -->
+
+
+    
+<body>
+
+
+    <!-- search input 창 확인하기  -->

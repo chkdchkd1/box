@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시판</title>
+    <link rel="stylesheet" href="side.css">
+    <script src="https://kit.fontawesome.com/c2a1b202c0.js" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+    <div class="frame">
+        <div class="left-container">
+            <div class="search-box">
+                <input type="text" placeholder="  Search"/>
+                <button class="btn-search"><i class="fas fa-search"></i></button>
+            </div>
+            <ul class="nav-list">
+                <li class="nav-item"><a href="/main/side-left.html" class="nav-link"><span>메인페이지</span></a></li>
+                <li class="nav-item"><a href="/main/side-left-board.html" class="nav-link"><span>전시</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><span>행사 / 축제</span></a></li>
+                <li class="nav-item"><a href="#" class="nav-link"><span>티켓오픈공지</span></a></li>
+                <li><span class="nav-text">예매 정보</span></li>
+                    <ul>
+                        <li class="nav-item2"><a href="#" class="nav-link">날짜별 예매</a></li>
+                        <li class="nav-item2"><a href="#" class="nav-link">지역별 예매</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#" class="nav-link"></i><span>고객센터</span></a>
+            </ul>
+          </div>
+          <!-- //left-container -->
+        <div class="right-container">
+          <div class="content">
+            <!-- login-box -->
+            <div class="codrops-container">
+              <nav class="loging-box">
+                <ul>
+                  <li>로그인</li>
+                  <li>회원가입</li>
+                  <li>로그아웃</li>
+                  <li>관리자페이지</li>
+                  <li>회원정보</li>
+                  <li>예매확인/취소</li>
+                </ul>
+              </nav>
+            </div>
+            <!-- main-content -->
+            <div class="main-content">
+                <div class="content-min-wrap">
+                    <div id="NoticeRead" style="display: block;">
+                        <div class="noti-view-tit">
+                            <span class="noti-tit-tag01">티켓오픈</span>
+                            <p>뮤지컬 [어쩌면 해피엔딩] 일부회차 취소 및 재 예매 오픈</p>
+                        </div>
+                        <input type="hidden" id="hdNotiTitle" value="뮤지컬 [어쩌면 해피엔딩] 일부회차 취소 및 재 예매 오픈">
+                        <input type="hidden" id="hdNotiID" value="10431">
+                        <div class="noti-view-date">
+                            <span>등록일 : 2020-08-25</span>
+                            <span>조회수 : 1,642</span>
+                        </div>
+                        <div class="noti-view-ticket">
+                            <div class="noti-vt-layout">
+                                <div class="noti-vt-left">
+                                    <img src="http://tkfile.yes24.com/upload2/PerfBlog/202007/20200727/20200727-36898_1.jpg" width="180" height="252"> 
+                                </div>
+                                <div class="noti-vt-right">
+                                    <p class="noti-vt-tit">뮤지컬 〈어쩌면 해피엔딩〉 2020</p>
+                                    <div class="noti-vt-box">
+                                        <div>
+                                                <p class="noti" id="noti1">
+                                                </p><div class="noti-vt-open">
+                                                    <span><em>티켓오픈</em></span>
+                                                    <span id="title1">2020.08.26(수) 오후 5:00</span>
+                                                </div>
+                                                <p></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="noti-view-con">
+                            <!--공연개요, 할인정보, 기획사정보-->
+                            <div class="noti-view-coment"><p class="noti-view-comen-tit">공연 개요</p><div class="noti-view-comen-txt">뮤지컬 &lt;어쩌면 해피엔딩&gt; 는 코로나19 집단감염 확산으로 인한 ‘사회적 거리두기 2단계 조치 강화’ 및 ‘방역수칙 의무화’에 따라 8월 27일(목)까지 중단하며, 8월 28일(금)~9월 6일(일)까지 ［좌석 한 칸 띄어앉기］를 시행합니다. 
+                        <br>
+                        <br>&lt;공연 취소&gt;
+                        <br>- 8월 25일(화) ~ 9월 6일(일) 공연
+                        <br>- 기존 예매건은 모두 수수료 없이 예매처를 통해 일괄 취소됩니다.
+                        <br>
+                        <br>&lt;공연 재오픈 : 좌석 한 칸 띄어앉기 시행&gt;
+                        <br>- 8월 28일(금)~9월 6일(일) 공연
+                        <br>- ［좌석 한 칸 띄어앉기］ 배치도가 적용된 후, 재예매 진행
+                        <br>- 재오픈 기간 내 예매는 회차당 1인 4매로 제한합니다.
+                        <br>- 재오픈 작업을 위해 오전 10시부터 모든 회차 예매는 마감됩니다.
+                        <br>
+                        <br><p><span style="color: rgb(255, 0, 0);">※ 선예매 가능일시 : 2020년 08월 26일(수) 오후 3시 ~ 오후 4시 30분
+                        <br><span style="color: rgb(255, 0, 0);">※ 선예매 오픈기간 : 2020년 08월 28일(금) ~ 9월 6일(일)
+                        <br><span style="color: rgb(255, 0, 0);">※ 선예매 가능대상 : 8/25(화)~9/6(일) 공연 취소 및 좌석 띄어앉기에 따라 강제 취소된 예매자 중 별도의 메시지 수신자
+                        <br><span style="color: rgb(255, 0, 0);">(*선예매 대상자분들에게 별도의 메시지가 발송되었으며 수신자에 한해 예매 권한 부여됩니다.)</span></span></span></span></p>
+                        <br>
+                        <br>
+                        <br>※ 일반예매 안내
+                        <br>1. 예매 가능 일시 : 2020년 08월 26일(수) 오후 5시
+                        <br>2. 일반 예매는 기존 예매자 선예매 진행 후 남은 잔여석에 한하여 진행됩니다.
+                        <br>
+                        <br>
+                        <br>&lt;공연정보&gt;
+                        <br>공연 일정: 2020년 6월 30일(화)~2020년 9월 13일(일)
+                        <br>공연 시간: 화목금 20시 /수 16시, 20시 / 토 15시, 19시 / 일, 공휴일 14시, 18시 (월 공연 없음)
+                        <br>공연 장소: 예스24스테이지 1관
+                        <br>티켓 가격: R석 66,000원, S석 44,000원
+                        <br>러닝 타임: 110분 (인터미션 없음)
+                        <br>관람 등급: 만 13세 이상 (중학생 이상 관람가)
+                        <br></div></div>
+                            <div class="noti-view-coment"><p class="noti-view-comen-tit">공연 소개</p><div class="noti-view-comen-txt"><p><b><span style="color: rgb(102, 153, 255);">웰메이드 창작 뮤지컬의 신화</span></b></p><p><b><span style="color: rgb(102, 153, 255);">뮤지컬 &lt;어쩌면 해피엔딩&gt; 2020 NEW PRODUCTION</span></b></p><p>&nbsp;</p><p>2015 트라이아웃 전 회차 매진, 2016 초연 관객 평점 9.8 기록!</p><p>제 2회 한국뮤지컬어워즈 6개 부문, 제 6회 예그린 어워드 4개 부문 석권!</p><p>2020년 1월 미국 애틀랜타 트라이아웃, 2021 브로드웨이 개막 예정!</p><p>작품성과 대중성을 고루 갖춘 웰메이드 창작 뮤지컬</p><p>&nbsp;</p><p><b>그리고 2020년, 여름밤 반딧불처럼 찾아온 NEW 시즌!</b></p><p>&nbsp;</p><p>&nbsp;</p><p><b><span style="color: rgb(102, 153, 255);">모두가 기다려온 가장 완벽한 CAST와 창작진</span></b></p><p>&nbsp;</p><p>특유의 서정적 감성으로 탄탄한 마니아층을 확보한</p><p><b>윌 애런슨(Will Aronson) </b>작곡가 <b>박천휴 </b>작가</p><p>트라이아웃부터 함께한 섬세한 감성의 <b>김동연</b> 연출</p><p><b>주소연</b> 음악감독의 6인조 라이브 밴드</p><p>&nbsp;</p><p>어쩌면해피엔딩의 초연 오리지널 CAST <b>전미도, 정문성, 성종완</b></p><p>재연을 성공적으로 이끌었던 <b>전성우</b>와 <b>강혜인</b></p><p>뮤지컬계에서 지금 가장 주목받는 신인 <b>양희준</b>과 <b>한재아</b></p><p>따뜻한 감성을 더해줄 <b>이선근</b>까지</p><p>&nbsp;</p><p><b>2020년 새로운 시즌에서 보여줄 최고의 캐스팅, 완벽한 시너지!</b></p><p>&nbsp;</p><p>&nbsp;</p><p><b>&lt;시놉시스&gt;</b></p><p>멀지 않은 미래, 21세기 후반. 서울 메트로폴리탄</p><p>가까운 미래에 인간을 돕기 위해 만들어진 로봇인 '헬퍼봇' 올리버와 클레어.</p><p>이제는 구형이 되어 버려진 채 홀로 외롭게 살아간다.</p><p>우연히 서로를 마주하고 조금씩 가까워지는 둘.</p><p>반딧불을 찾아 예기치 않은 여행을 함께 하면서 인간의 복잡한 감정을 배우게 된다.</p><p>그러나 감정이 깊어질수록 그것이 가져오는 고통 또한 깨닫게 되는데....</p><p>&nbsp;</p><p>&nbsp;</p><p><b>&lt;캐스팅&gt;</b></p><p>올리버役&nbsp; 정문성, 전성우, 양희준</p><p>클레어役&nbsp; 전미도, 강혜인, 한재아</p><p>제임스役&nbsp; 성종완, 이선근</p><p>&nbsp;</p><p><b><creative team=""></creative></b></p><p>작·작곡 윌 애런슨(WILL ARONSON)&nbsp; 작·작사 박천휴&nbsp; 연출 김동연</p><p>음악감독 주소연&nbsp; 안무 송희진&nbsp; 무대·영상디자인 조수현</p><p>조명디자인 마선영&nbsp; 음향디자인 권지휘&nbsp; 의상디자인 도연</p><p>소품디자인 정이든&nbsp; 분장디자인 장혜진 무대 감독 최서연 기술 감독 이재은</p><div><br></div><p><br></p></div></div>
+                            <div class="noti-view-coment"><p class="noti-view-comen-tit">할인 정보</p><div class="noti-view-comen-txt">- 재오픈 할인: 전석 20% 
+                        <br> *8/28(금) ~ 9/6(일) 공연 예매시 할인
+                        <br>
+                        <br>- 청소년 할인 : S석 30% 할인
+                        <br>* 만 13세 이상 ~ 만 24세 이하 청소년 (1995년~2007년도 출생자)
+                        <br>* 본인만 할인 (1인 1매)
+                        <br>
+                        <br>- 장애인 및 국가유공자 할인 : 전석 50%
+                        <br>* 장애인 중증 : 동반 1인까지 50% 할인 (1인 2매)
+                        <br>* 장애인 경증 및 국가유공자(유족증 불가) : 본인만 50% 할인 
+                        <br>※ 휠체어석 예매 문의 : 오픈리뷰 1588-5212</div></div>
+                            <div class="noti-view-coment"><p class="noti-view-comen-tit">기획사 정보</p><div class="noti-view-comen-txt">제작 CJ ENM  
+                        <br>제작 대행 ㈜더블케이필름앤씨어터 
+                        <br>마케팅 홍보 ㈜로네뜨 
+                        <br>티켓 매니지먼트 오픈리뷰
+                        <br>작품개발 우란문화재단</div></div>
+                        </div>
+                        <div class="mgz-view-cmarea" style="display: block;">
+                            <ul class="mgz-view-comens">
+                                <li>
+                                    <div class="mgz-view-cmperson">
+                                        <em>rlawltn054</em>
+                                        2020.09.13
+                                    </div>
+                                    <div class="mgz-view-cmchat">							
+                                        댓글&nbsp;&nbsp;&nbsp;<a onclick="jsf_mgz_DeleteReply(769547)" style="cursor:pointer"><img src="http://tkfile.yes24.com/img/common/btn_cls.gif" alt="삭제"></a>										
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="mgz-view-textarea">
+                                <textarea placeholder="댓글을 작성해주세요." cols="" rows="" class="txt_rep" id="txtReplyCont" onclick="jsf_mgz_logincheck(1,19007, this);" onkeyup="javascript:jsf_mgz_LimitInputData(this, 250);"></textarea>
+                                <a onclick="jsf_mgz_InsertReply();" style="cursor:pointer;">등록</a>
+                                <p class="mgz-view-textnum"><span>0</span>/250</p>
+                            </div>
+                        </div>
+                        
+                        <div class="noti-view-control">
+                            <a style="cursor:pointer" onclick="jsf_notice_NoticeList();" class="noti-list">목록보기</a>
+                        </div>	
+                    </div>
+                </div>
+                <!--  content-min-wrap -->
+            </div>
+            <!-- //main-content -->
+        </div>
+        <!-- //right-container -->
+      </div>
+      <!-- //frame -->
+
+
+    
+<body>
+<script>
+
+    // search input 창 확인하기 
+
+    //   https://ming9mon.tistory.com/107
+    // https://www.chartjs.org/docs/latest/
+    // https://startbootstrap.com/previews/sb-admin/
+    // https://startbootstrap.com/templates/admin-dashboard/
+
+    // 티켓오픈 고객센터 티켓관리(옆에다가 수정버튼 달기)
+    // 차트 (상품코드 상품명 시작일 종료일 ) ( 아레아 차트(매일마다 몇명이 예약했는지) 파이차트 (성별 / 나이대별) 총 티켓 예매수 / 매출 )
+    // ----> yes24 티켓오픈 공지 참고하기 
+
+// 상품등록, 티켓오픈공지 등록, 고객센터 등록, yes24 고객센터 1:1 문의 하기 폼 참고해서 티켓오픈 공지랑 스타일 맞추기 
+ 
+</script>
+</body>
+</html>
